@@ -35,6 +35,8 @@ if [[ -f /tmp/${name}-httpd-logs-${timestamp}.tar ]];
 then
 	aws s3 cp /tmp/${name}-httpd-logs-${timestamp}.tar s3://${s3bucket}/${name}-httpd-logs-${timestamp}.tar
 fi
+
+
 apacheroot="/var/www/html"
 
 if [ ! -f ${apacheroot}/inventory.html ];
